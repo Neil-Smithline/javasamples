@@ -1,0 +1,2 @@
+* Java Coding Samples
+Sample Java coding. Stuff I like to brush up on before interviews and such. Maybe it will help you, but not likely.

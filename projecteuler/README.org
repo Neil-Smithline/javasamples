@@ -1,0 +1,7 @@
+* Project Euler
+  Little programs that solve problems from http://projecteuler.net/. Solutions are named:
+  - P<num>_<desc> 
+
+  Where <num> is the problem number from
+  http://projecteuler.net/problems and <desc> is a brief description
+  of the file.
