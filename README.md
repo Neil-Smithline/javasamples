@@ -1,4 +1,0 @@
-javasamples
-===========
-
-Java Coding Samples
