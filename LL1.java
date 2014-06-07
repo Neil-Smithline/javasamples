@@ -4,9 +4,6 @@
 // adding function pointer-ish use of interfaces for walking the list
 // in forward() and reverse().
 public class LL1 {
-    public interface Walker {
-	public void walk(LL1 node);
-    }
     private LL1 next = null;
     private LL1 prev = null;
     public String data = "";
@@ -23,6 +20,10 @@ public class LL1 {
 	return prev;
     }
 
+    // This functions is horribly inefficient. As last() will
+    // generally be called prior to calling reverse(), the utility of
+    // reverse() is reduced. Having a list pointer that points to the
+    // head and tail node of the list could fix this.
     public LL1 last() {
 	LL1 node;
 	for(node=this; node.next!=null; node = node.next) {
@@ -34,7 +35,7 @@ public class LL1 {
     /** 
      * Appends a node after the current node. The return value is
      * always the argument that is passed in. This is done to make
-     * this function's signature similar to that of insert.
+     * this function's signature similar to that of insert().
      *
      * @return The new head node (ie: this).
      **/
@@ -49,7 +50,7 @@ public class LL1 {
     }
 
     /** 
-     * Insert a node after the current node. 
+     * Insert a node before the current node. 
      *
      * @return The new head node (ie: node).
      **/
@@ -82,8 +83,6 @@ public class LL1 {
     }
 
     public static void main(String[] args) {
-	System.out.println("Foo");
-	
 	LL1 n = new LL1("first");
 	n = n.append(new LL1("second"));
 	n = n.insert(new LL1("zero"));
